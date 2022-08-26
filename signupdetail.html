@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-image:url("https://img.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_548887-136.jpg?size=626&ext=jpg")
+}
+   #container>div{
+    display: grid;
+    width: 300px;
+    margin: auto;
+    gap: 5px;
+    margin-top: 100px;
+   }
+   #container>div>p{
+    font-size: 12px;
+    margin-top: -5px;
+   }
+   #container>div>input{
+    border-radius: 10px;
+   }
+   h1{
+        color: rgb(109,109,109);
+        margin-left:90px ;
+        margin-top:-38px;
+    }
+    img{
+        padding-left: 50px;
+    }
+    h2{
+        text-align: center;
+        color: indigo;
+    }
+
+    </style>
+</head>
+<body>
+    <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
+    <h1>rentomojo</h1>
+    <h2>Enter Your Details</h2>
+    <div id="container">
+        <div>
+            <label for="name">Enter Your Name</label>
+            <input type="text" placeholder="Enter your name" id="name">
+            <label for="email">Enter you Email ID</label>
+            <input type="email" placeholder="Enter your Email" id="email">
+            <label for="code">Referal code</label>
+            <input type="number" id="code" placeholder="Code for discount">
+            <p>*Optional</p>
+            <button id="loginpage" style="border-radius:5px;background-color:blue;color:white">Continue</button>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+document.querySelector("#loginpage").addEventListener("click",mypage)
+
+function  mypage(event){
+    event.preventDefault()
+    let name=document.querySelector("#name").value
+    let email=document.querySelector("#email").value
+
+    if(name=="" &&email==""){
+        alert("Please Enter Vaild Details")
+    }else{
+        document.location.href="Day-2.html"
+    }
+    
+}
+
+</script>
