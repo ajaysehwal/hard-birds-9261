@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  #p_image {
+    width: 300px;
+    height: 250px;
+    border-radius:20%;
+  }
+  
+  @media all and (min-width: 312px) and (max-width: 540px) {
+    #container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #searchcount{
+     margin-left: 100px;
+     
+  }
+  *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#heading{
+  position:fixed;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+
+}
+#heading>div{
+    display: flex;
+    height:50px;
+    justify-content:space-evenly;
+    width:850px;
+    align-items: center;
+    margin: auto;
+
+}
+#heading>div>img{
+    width: 35px;
+    left: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+#heading>div>input{
+    width: 400px;
+    border-radius: 5px;
+    margin-left: 40px;
+    height: 25px;
+    margin-right: -10px;
+    padding-left: 10px;
+
+}
+#heading>div>h2{
+    color: rgb(109,109,109);
+    font-size:30px;
+     cursor: pointer;
+}
+#heading>div>button{
+    background-color: red;
+    border: red;
+    color: beige;
+    width: 120px;
+    height: 30px;
+    border-radius: 12px;
+}
+#heading>div>#search{
+    width: 50px;
+    border-radius: 5px;
+    height: 26px;
+}
+#heading>div>.cart{
+    width: 15px;
+    height: 15px;
+    margin-right: -7px;
+}
+#heading>div>.searchi{
+    width: 24px;
+}
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <div >
+      <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
+      <h2>rotomojo</h2>
+      <input id="searchforall" placeholder="Search for products" type="text">
+        
+        <button id="search">Search</button>
+        <img  class="cart" src="https://cdn-icons-png.flaticon.com/128/3144/3144456.png" alt="">
+         <label>Cart</label>
+         <button class="signlog">LOGIN/SIGNUP</button>
+      </div>
+      </div>
+    <h3 id="searchcount">Search result(50+)</h3>
+    <div id="container">
+    </div>
+</body>
+</html>
+
+<script>
+    let cartArr=JSON.parse(localStorage.getItem("cart-items"))||[];
+ let data=[
+    {image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
+    h3tag:"Sofa & Bed Combo",
+    prices:1789
+}
+ ]
+ 
+data.forEach(function(el){
+    let row=document.createElement("div")
+    let image=document.createElement("img")
+    image.setAttribute("src",el.image);
+    image.setAttribute("id","p_image")
+    let text=document.createElement("h3");
+    text.innerText=el.h3tag;
+    let prices=document.createElement("p")
+    prices.innerText="$"+el.prices;
+    let cart=document.createElement("button")
+    cart.innerText="Add to cart"
+    cart.addEventListener("click",function(){
+    cartArr.push(el)
+    localStorage.setItem("cart-items",JSON.stringify(cartArr))
+  })
+    let rent=document.createElement("button")
+    rent.innerText="Rent"
+    rent.style.marginLeft="150px"
+    rent.style.backgroundColor="red"
+    rent.style.width="50px"
+    rent.style.color="white"
+    rent.style.border="red"
+    row.append(image,text,prices,cart,rent)
+    document.querySelector("#container").append(row)
+})
+    
+
+
+</script>
