@@ -1,0 +1,181 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+#heading{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+
+}
+#heading>div{
+    display: flex;
+    height:50px;
+    justify-content:space-evenly;
+    width:850px;
+    align-items: center;
+    margin: auto;
+
+}
+#heading>div>img{
+    width: 35px;
+    left: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+#heading>div>input{
+    width: 400px;
+    border-radius: 5px;
+    margin-left: 40px;
+    height: 25px;
+    margin-right: -10px;
+    padding-left: 10px;
+
+}
+#heading>div>h2{
+    color: rgb(109,109,109);
+    font-size:30px;
+     cursor: pointer;
+}
+#heading>div>button{
+    background-color: red;
+    border: red;
+    color: beige;
+    width: 120px;
+    height: 30px;
+    border-radius: 12px;
+}
+#heading>div>#search{
+    width: 50px;
+    border-radius: 5px;
+    height: 26px;
+}
+#heading>div>.cart{
+    width: 15px;
+    height: 15px;
+    margin-right: -7px;
+}
+#heading>div>.searchi{
+    width: 24px;
+}
+#container {
+max-width: 1200px;
+position: relative;
+margin: auto;
+margin-top: 10px;
+}
+.mySlides {
+display: none;
+}
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+margin-top: -22px;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+background-color: #717171;
+}
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+
+#tbody1{
+display: grid;
+grid-template-columns: repeat(6,1fr);
+width:1100px;
+text-align: center;
+margin-top: 10px;
+margin: auto;
+gap: 10px;
+}
+#p_image{
+width:60px;
+border-radius: 10px;
+cursor: pointer;
+}
+#texts{
+border-radius: 20px;
+cursor: pointer;
+
+}
+
+#p_image:hover{
+box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fortext{
+width:120px;
+margin-top: 50px;
+margin-bottom: 10px;
+margin-left: 250px;
+border-bottom: 3px solid  red;
+height: 50px;
+
+}
+#tbody2{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+margin: auto;
+width: 1000px;
+gap: 40px;
+height: 300px;
+
+
+}
+#img2{
+width: 50px;
+}
+#products>div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    width: 1200px;
+    margin: auto;
+    position:sticky;
+}
+#pro_img{
+    width: 200px;
+    border-radius: 20px;
+}
+#products{
+    background-color:#bbb;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
