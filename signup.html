@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-image:url("https://img.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_548887-136.jpg?size=626&ext=jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       background-size: cover;
+    }
+    
+    #container{
+        margin: auto;
+        width: 200px;
+        margin-top: 50px;
+        height: 100px;
+        padding-bottom: 100px;
+    }
+    #container>div{
+        display: grid;
+        width: 200px;
+        align-items: center;
+        margin: auto;
+        gap:10px;
+        border-radius: 20px;
+    }
+    #container>div>input:hover{
+        border-top: black;
+    }
+    #container>div>input{
+        height: 20px;
+        border-radius: 5px;
+    }
+    #container>div>button{
+        color:white;
+       background-color:darkblue;
+       border: bisque;
+       margin-top: 20px;
+       border-radius: 5px;
+    }
+    h1{
+        color: rgb(109,109,109);
+        margin-left:90px ;
+        margin-top:-38px;
+    }
+    img{
+        padding-left: 50px;
+    }
+    h2{
+        text-align: center;
+
+    }
+    </style>
+</head>
+<body>
+    <h2>Enter Your Phone Number</h2>
+    <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg"" alt="">
+    <h1>rentomojo</h1>
+    <div id="container">
+        <div>
+        <input type="text" placeholder="Enter Your Phone number" class="number">
+        <button class="otp">Continue</button>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+
+
+
+  document.querySelector(".otp").addEventListener("click",otpfun)
+
+  function otpfun(event){
+    event.preventDefault()
+    let numbers=document.querySelector(".number").value
+    if(numbers.length==10){
+        document.location.href="otp.html";
+    }else{
+        alert("Please Enter Valid Phone Number")
+    }
+  }
+  
+  
+
+
+
+</script>
