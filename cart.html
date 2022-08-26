@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+      body{
+        text-align: center;
+        background-color: khaki;
+      }
+      
+    body{
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+        
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            
+        }
+        #p_image{
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+        }
+        h2{
+          background-color: darkorange;
+        }
+        h1{
+          background-color: orange;
+          color: whitesmoke;
+        }
+        </style>
+
+</head>
+<body>
+ <h1>CART</h1>
+    <h2>Total Item :<span id="counti">0</span></h2>
+    <h2>Total Price :<span id="total"></span></h2>
+    <div id=container></div>
+
+</body>
+</html>
+
+<script>
+let getdata=JSON.parse(localStorage.getItem("cart-items"))||[];
+
+
+
+  getdata.forEach(function(el,i){
+    let row=document.createElement("div")
+    let img=document.createElement("img")
+    img.setAttribute("id","p_image")
+    img.setAttribute("src",el.image)
+    let text=document.createElement("h4")
+    text.innerText=el.h4tage
+    let prices=document.createElement("p")
+    prices.innerText="₹"+el.price
+    let btn=document.createElement("button")
+    btn.innerText="Remove"
+    btn.addEventListener("click",function(){
+        event.target.parentNode.remove()
+        getdata.splice(i,1);
+        localStorage.setItem("cart-items",JSON.stringify(getdata));
+
+    })  
+    row.append(img,text,prices,btn)
+    document.querySelector("#container").append(row)
+  })
+
+let countproduct=document.querySelector("#counti").innerText=getdata.length;
+
+let total = getdata.reduce(function (acc, el, i) {
+    return acc + Number(el.price);
+  }, 0);
+
+  console.log(total);
+  document.querySelector(
+    "#total"
+  ).innerText = `₹ ${total} including taxes`;
+
+
+</script>
