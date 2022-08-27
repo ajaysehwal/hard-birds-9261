@@ -9,6 +9,17 @@
   margin-bottom: 20px;
 
 }
+#last{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    background-color:gainsboro;
+}
+#last>div>img{
+  width: 200px;
+}
+#last>div{
+    margin: auto;
+}
 #heading>div{
     display: flex;
     height:50px;
@@ -25,10 +36,10 @@
     cursor: pointer;
 }
 #heading>div>input{
-    width: 400px;
+    width: 450px;
     border-radius: 5px;
     margin-left: 40px;
-    height: 25px;
+    height: 30px;
     margin-right: -10px;
     padding-left: 10px;
 
@@ -37,24 +48,59 @@
     color: rgb(109,109,109);
     font-size:30px;
      cursor: pointer;
+     margin-right: 120px;
 }
 #heading>div>button{
     background-color: red;
     border: red;
     color: beige;
-    width: 120px;
+    width: 170px;
     height: 30px;
     border-radius: 12px;
+    margin-left: 10px;
 }
 #heading>div>#search{
-    width: 50px;
+    width: 80px;
+    height: 28px;
+    border-radius: 2px;
+}
+#morebtn{
+    text-align: center;
+}
+#morebtn>button{
+    width:100px;
+    height: 27px;
+    margin-top: 10px;
+    color:whitesmoke;
+    background-color:blue;
+    border: 2px solid blue;
+    font-size: 15px;
     border-radius: 5px;
-    height: 26px;
+
+}
+#knowbtn{
+    width:100px;
+    height: 27px;
+    margin-top: 10px;
+    color:whitesmoke;
+    background-color:blue;
+    border: 2px solid blue;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#knowbtn:hover{
+    background-color: black;
+    border: 2px solid black;
+}
+#morebtn>button:hover{
+    background-color: black;
+    border: 2px solid black;
 }
 #heading>div>.cart{
     width: 15px;
     height: 15px;
-    margin-right: -7px;
+    margin-left:20px;
 }
 #heading>div>.searchi{
     width: 24px;
@@ -179,3 +225,7 @@ width: 50px;
     padding-bottom: 50px;
 
 }
+#details{
+    margin-left: 10px;
+}
+
