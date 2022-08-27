@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+  background-image: url("https://cdn.wallpapersafari.com/18/83/TmD42B.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+        form{
+            display: grid;
+            width: 20%;
+            margin: auto;
+            margin-top: 100px;
+            
+            
+        }
+        h1{
+            text-align: center;
+            color: floralwhite;
+        }
+        h2{
+            text-align: center;
+            color: gainsboro;
+        }
+        #click{
+            margin-top:10px ;
+            background-color: green;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PAYMENT GATEWAY</h1>
+    <h2>Enter Your Card Details</h2>
+    <form>
+        <label for="number">Card Number</label>
+        <input text="text" placeholder="Enter your card number" id="cardnumber">
+        <label for="cvv">Enter Card CVV</label>
+        <input text="number" placeholder="Enter your CVV" id="cvv">
+        <label for="end">Expiry date</label>
+
+    <input type="date" id="end" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">
+       <label for="name">Name</label>
+       <input text="text" placeholder="Enter Your name" id="name">
+      <button id="click">submit</button>
+
+    </form>
+</body>
+</html>
+<script>
+document.querySelector("#click").addEventListener("click",payment)
+function payment(event){
+    event.preventDefault()
+    let card=document.querySelector("#cardnumber").value
+    
+    
+    
+}
+document.querySelector("#click").addEventListener("click", function () {
+    let card=document.querySelector("#cardnumber").value
+    if(card.length==12){
+         document.location.href="otp2.html"
+    }else if(card.length==""){
+        alert(" Data Not found")
+    }
+    
+   let cvv=document.querySelector("#cvv").value
+   if(cvv.length==4){
+    document.location.href="otp2.html"
+   }else if(cvv.length==""){
+    alert("Please Enter Valid CVV")
+   }
+  })
+
+
+</script>
