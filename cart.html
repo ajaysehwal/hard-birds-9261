@@ -6,7 +6,6 @@
     <style>
       body{
         text-align: center;
-        background-color: khaki;
       }
       
     body{
@@ -28,21 +27,74 @@
             border-radius: 10px;
         }
         h2{
-          background-color: darkorange;
+          color:dimgrey;
+          width:300px;
+          border-radius: 20px;
+          width: 200px;
+          
         }
         h1{
           background-color: orange;
           color: whitesmoke;
         }
+        #checkout{
+          color:white;
+          background-color:black;
+          width: 100px;
+          height: 30px;
+          border-radius: 10px;
+          margin-left:1350px;
+        }
+        #checkout:hover{
+          color:black;
+          background-color: white;
+          border:1px solid white
+        }
+        #heading{
+          width:300px
+        }
+        #heading>div{
+          display: flex;
+    height:50px;
+    justify-content:space-evenly;
+    width:850px;
+    align-items: center;
+  
+    margin: auto;
+    margin-left: 120px;
+
+}
+#heading>div>h3{
+    color: rgb(109,109,109);
+    font-size:30px;
+     cursor: pointer;
+
+     margin-right:900px;
+
+}
+#heading>div>img{
+    width: 35px;
+    left: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+
         </style>
 
 </head>
 <body>
- <h1>CART</h1>
-    <h2>Total Item :<span id="counti">0</span></h2>
-    <h2>Total Price :<span id="total"></span></h2>
-    <div id=container></div>
 
+ <h1>CART</h1>
+ <div id="heading">
+  <div >
+<img id="homeagain" src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
+<h3>rotomojo</h3></div></div>
+<button id="checkout">Checkout</button>
+  <div><h2>Total Item :<span id="counti">0</span></h2>
+    <h2>Total Price :<span id="total"></span></h2></div>
+    
+
+    <div id=container></div>
 </body>
 </html>
 
@@ -83,5 +135,11 @@ let total = getdata.reduce(function (acc, el, i) {
     "#total"
   ).innerText = `₹ ${total} including taxes`;
 
+  document.querySelector("#homeagain").addEventListener("click",function(){
+        document.location.href="Day-2.html"
+      })
 
+      document.querySelector("#checkout").addEventListener("click",function(){
+        document.location.href="payment.html"
+      })
 </script>
