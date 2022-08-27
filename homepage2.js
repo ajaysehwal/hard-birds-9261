@@ -49,12 +49,12 @@ let slideIndex = 1;
     ]
     tbody1data.forEach(function(el){
       let row=document.createElement("div")
+      
      
 
  let div1=document.createElement("img")
  div1.setAttribute("src",el.image)
  div1.setAttribute("id", "p_image");
-
 
  let div2=document.createElement("p")
  div2.innerText=el.text
