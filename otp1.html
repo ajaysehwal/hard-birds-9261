@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+        background-image:url("https://img.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_548887-136.jpg?size=626&ext=jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+       background-size: cover;
+    }
+      #otp{
+        margin: auto;
+        width: 200px;
+        margin-top: 50px;
+        height: 100px;
+        padding-bottom: 100px;
+    }
+    h1{
+        color: rgb(109,109,109);
+        margin-left:90px ;
+        margin-top:-38px;
+    }
+    img{
+        padding-left: 50px;
+    }
+    #otp>div{
+        display: grid;
+        width: 200px;
+        align-items: center;
+        margin: auto;
+        gap:10px;
+        border-radius: 20px;
+    }
+   
+    #otp>div>input{
+        height: 20px;
+        border-radius: 5px;
+    }
+    #otp>div>button{
+        color:white;
+       background-color:darkblue;
+       border: bisque;
+       margin-top: 20px;
+       border-radius: 5px;
+    }
+    #otp>div>p{
+        font-size: 10px;
+        margin-top: -7px;
+    }
+    h2{
+        text-align: center;
+    }
+    #otp>div>h3{
+        color:darkgreen;
+        font-size: 12px;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
+    <h1>rentomojo</h1>
+    <h2>Enter OTP here</h2>
+    <div id="otp">
+        <div>
+        <input type="password" placeholder="Enter Your OTP" id="otps">
+        <p>OTP send in your Moblie</p>
+        <h3 class="return">*Change Number</h3>
+        <button class="success">Continue</button>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    document.querySelector(".success").addEventListener("click",successfun)
+
+    function successfun(event){
+        event.preventDefault()
+    let Enterotp=document.querySelector("#otps").value
+         if(Enterotp.length==4){
+            document.location.href="signupdetail.html"
+         }else{
+            alert("Please Enter valid OTP")
+         }
+    }
+document.querySelector(".return").addEventListener("click",returnfun)
+  
+
+function returnfun(event){
+    event.preventDefault()
+    document.location.href="signup.html"
+}
+
+</script>
