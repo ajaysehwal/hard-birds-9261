@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>img{
+            width: 400px;
+            height:300px;
+            border-radius:20px;
+            }
+            div{
+                text-align: center;
+                margin-top: 100px;
+            }
+            div>h1{
+                font-size: 40px;
+                color:green;
+            }
+            div>button{
+                color:red;
+                border: 2px solid red;
+                width: 100px;
+                border-radius: 5px;
+                height: 35px;
+                margin-top: 15px;
+            }
+            div>button:hover{
+                border: 2px solid black;
+                color:white;
+                background-color: black;
+            }
+            div>p{
+                margin-top:-15px;
+                color: darkgreen;
+            }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="https://www.clipartmax.com/png/middle/270-2707415_confirm-icon-payment-success.png" alt="">
+     <h1>Payment Successful</h1>
+     <p>You have recevied mail on your Email</p>
+     <button id="gohome">Go Home</button>
+</div>
+    </body>
+</html>
+<script>
+
+    document.querySelector("#gohome").addEventListener("click",function(){
+        document.location.href="Day-2.html"
+    })
+</script>
