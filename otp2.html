@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+  background-image: url("https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37355.jpg?w=1380&t=st=1661605253~exp=1661605853~hmac=17e0054b779101cff5eced23989bad46f223e32b05423520da49f4d00777692d");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#otp>div{
+        display: grid;
+        width: 200px;
+        align-items: center;
+        margin: auto;
+        gap:10px;
+        border-radius: 20px;
+        
+    }
+   
+    #otp>div>input{
+        height: 20px;
+        border-radius: 5px;
+    }
+    #otp>div>button{
+        color:white;
+       background-color:green;
+       border: bisque;
+       margin-top: 20px;
+       border-radius: 5px;
+       height: 25px;
+    }
+    #otp>div>p{
+        font-size: 10px;
+        margin-top: -7px;
+    }
+    h2{
+        text-align: center;
+    }
+    #otp>div>h3{
+        color:darkgreen;
+        font-size: 12px;
+        margin-left: 150px;
+        cursor: pointer;
+        width:200px;
+        margin-top: -40px;
+
+    }
+    </style>
+</head>
+<body>
+    <h2>Enter OTP here</h2>
+    <div id="otp">
+        <div>
+        <input type="password" placeholder="Enter Your OTP" id="otps">
+        <p>OTP send in your Moblie</p>
+        <h3 class="return">*Change card Number</h3>
+        <button class="success">Continue</button>
+    </div>
+    </div>
+   
+</body>
+</html>
+<script>
+
+document.querySelector(".success").addEventListener("click",function(){
+    let otpcount=document.querySelector("#otps").value
+    if(otpcount.length==4){
+        document.location.href="Paymentdone.html"
+    }else{
+        alert("Please Enter Vaild OTP")
+    }
+})
+
+
+
+document.querySelector(".return").addEventListener("click",function(){
+    document.location.href="payment.html"
+})
+
+</script>
