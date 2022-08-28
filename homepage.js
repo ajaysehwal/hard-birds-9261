@@ -72,24 +72,24 @@ let slideIndex = 1;
       h3text:"Finest-quality products",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     },
-    {images:"https://cdn-icons-png.flaticon.com/128/3030/3030336.png",
-      h3text:"Finest-quality products",
+    {images:"https://cdn-icons-png.flaticon.com/128/535/535188.png",
+      h3text:"Any Location",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     },
-    {images:"https://cdn-icons-png.flaticon.com/128/3030/3030336.png",
-      h3text:"Finest-quality products",
+    {images:"https://cdn-icons-png.flaticon.com/128/8337/8337294.png",
+      h3text:"Free Maintainace",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     },
-    {images:"https://cdn-icons-png.flaticon.com/128/3030/3030336.png",
-      h3text:"Finest-quality products",
+    {images:"https://cdn-icons-png.flaticon.com/128/5991/5991077.png",
+      h3text:"Easy Return",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     },
-    {images:"https://cdn-icons-png.flaticon.com/128/3030/3030336.png",
-      h3text:"Finest-quality products",
+    {images:"https://cdn-icons-png.flaticon.com/128/5267/5267928.png",
+      h3text:"Cancel Anytime",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     },
-    {images:"https://cdn-icons-png.flaticon.com/128/3030/3030336.png",
-      h3text:"Finest-quality products",
+    {images:"https://cdn-icons-png.flaticon.com/128/5207/5207484.png",
+      h3text:"Keep Upgrading",
       ptext:"Quality matters to you, and us! That's why we do a strict quality-check for every product."
     }
     ]
@@ -111,7 +111,7 @@ let slideIndex = 1;
 
     })
 
-    document.querySelector(".signlog").addEventListener("click",function(){
+    document.querySelector("#signlog").addEventListener("click",function(){
      document.location.href="signup.html";
     })
 
@@ -141,51 +141,52 @@ let slideIndex = 1;
       let homedata=[
         {
           image:"https://p.rmjo.in/productSquare/durxsu1c-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Semi Automatic Washine Machine",
 
-          price:456,
+          price:498,
           cart:"Add Cart"
         },
         {
           image:"https://p.rmjo.in/productSquare/yxvjrli3-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Napster Metal Single Bed",
 
           price:456,
           cart:"Add Cart"
         },{
           image:"https://p.rmjo.in/productSquare/g0ealw05-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Morris Office Chair",
 
-          price:456,
+          price:789,
           cart:"Add Cart"
         },{
           
           image:"https://p.rmjo.in/productSquare/tmp99edr-500x500.jpg",
-           h4tage:"Rent itmes",
-          price:456,
+           h4tage:"Miller Office Chair",
+          price:560,
           cart:"Add Cart"
 
         },{
           image:"https://p.rmjo.in/productSquare/durxsu1c-500x500.jpg",
-          price:456,
+           h4tage:"Stuart Study Table",
+          price:245,
           cart:"Add Cart"
         },{
           image:"https://p.rmjo.in/productSquare/durxsu1c-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Barney Leather Recliner",
 
-          price:456,
+          price:799,
           cart:"Add Cart"
         },{
           image:"https://p.rmjo.in/productSquare/durxsu1c-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Poise Wooden Bed",
 
-          price:456,
+          price:999,
           cart:"Add Cart"
         },{
           image:"https://p.rmjo.in/productSquare/durxsu1c-500x500.jpg",
-          h4tage:"Rent itmes",
+          h4tage:"Mini Fridge",
 
-          price:456,
+          price:1000,
           cart:"Add Cart"
         }
         
@@ -201,8 +202,10 @@ homedata.forEach(function(el){
   let price=document.createElement("p")
   price.innerText="$"+el.price
   let cart=document.createElement("button")
+  cart.setAttribute("id","addcart")
   cart.innerText=el.cart
   cart.style.color="red"
+  
   cart.style.border="red"
   cart.style.width="80px"
   cart.addEventListener("click",function(){
