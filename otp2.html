@@ -50,6 +50,14 @@
         margin-top: -40px;
 
     }
+    #success{
+      width: 200px;
+      margin: auto;
+    }
+    #success:hover{
+    background-color: red;
+    color:white;
+    }
     </style>
 </head>
 <body>
@@ -59,7 +67,7 @@
         <input type="password" placeholder="Enter Your OTP" id="otps">
         <p>OTP send in your Moblie</p>
         <h3 class="return">*Change card Number</h3>
-        <button class="success">Continue</button>
+        <button id="success">Continue</button>
     </div>
     </div>
    
@@ -67,7 +75,7 @@
 </html>
 <script>
 
-document.querySelector(".success").addEventListener("click",function(){
+document.querySelector("#success").addEventListener("click",function(){
     let otpcount=document.querySelector("#otps").value
     if(otpcount.length==4){
         document.location.href="Paymentdone.html"
