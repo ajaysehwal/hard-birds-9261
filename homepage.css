@@ -225,7 +225,34 @@ width: 50px;
     padding-bottom: 50px;
 
 }
+#pro_img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 #details{
     margin-left: 10px;
 }
+#addcart:hover{
+    background-color: black;
+    color: beige;
+}
 
+#signlog{
+    border-radius: 5px;
+    cursor: pointer;
+}
+#signlog:hover{
+    background-color:darkblue;
+    color: white;
+}
+#search:hover{
+    background-color:black;
+
+}
+#search{
+    cursor: pointer;
+}
+
+#searchforall{
+    border: 1px solid silver;
+    padding-left: 30px;
+}
