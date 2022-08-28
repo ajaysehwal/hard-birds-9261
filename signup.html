@@ -7,10 +7,10 @@
     <title>Document</title>
     <style>
     body{
-        background-image:url("https://img.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_548887-136.jpg?size=626&ext=jpg");
+        background-image:url("https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1060&t=st=1661656480~exp=1661657080~hmac=f6e12fe0c07c91691f6a980a4a707728789969efa9dc0b69644888bca11682de");
         background-repeat: no-repeat;
         background-attachment: fixed;
-       background-size: cover;
+       background-size:cover;
     }
     
     #container{
@@ -28,31 +28,51 @@
         gap:10px;
         border-radius: 20px;
     }
-    #container>div>input:hover{
+    #container>div>.number:hover{
         border-top: black;
     }
-    #container>div>input{
-        height: 20px;
-        border-radius: 5px;
+    #container>div>.number{
+        height: 40px;
+        border-radius: 10px;
+        width: 300px;
+        border: 1px solid white;
+        padding-left: 20px;
+
     }
     #container>div>button{
         color:white;
        background-color:darkblue;
        border: bisque;
+       height: 30px;
+       font-size: 20px;
        margin-top: 20px;
-       border-radius: 5px;
+       border-radius: 20px;
+       padding-right: 10px;
+    }
+    #container>div>button:hover{
+        color:red;
+        background-color: aliceblue;
+        border: 1px solid red;
     }
     h1{
-        color: rgb(109,109,109);
         margin-left:90px ;
         margin-top:-38px;
+        color: aliceblue;
+        
+
+    
+    }
+    h1:hover{
+        color:skyblue
     }
     img{
         padding-left: 50px;
     }
     h2{
         text-align: center;
-
+        margin-left: 120px;
+        color:ghostwhite;
+        font-size:50px;
     }
     </style>
 </head>
@@ -78,7 +98,7 @@
     event.preventDefault()
     let numbers=document.querySelector(".number").value
     if(numbers.length==10){
-        document.location.href="otp.html";
+        document.location.href="otp1.html";
     }else{
         alert("Please Enter Valid Phone Number")
     }
