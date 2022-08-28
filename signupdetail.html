@@ -8,8 +8,11 @@
     <style>
         
         body{
-            background-image:url("https://img.freepik.com/free-vector/online-shopping-store-with-mobile-shopping-cart-mail-clouds-realistic-style-vector-illustration_548887-136.jpg?size=626&ext=jpg")
-}
+            background-image:url("https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg?w=1060&t=st=1661656480~exp=1661657080~hmac=f6e12fe0c07c91691f6a980a4a707728789969efa9dc0b69644888bca11682de");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
    #container>div{
     display: grid;
     width: 300px;
@@ -23,9 +26,15 @@
    }
    #container>div>input{
     border-radius: 10px;
+    height: 30px;
+    width:350px;
+    border: 1px solid white;
+   }
+   #container>div>label{
+    color:floralwhite;
    }
    h1{
-        color: rgb(109,109,109);
+        color:bisque;
         margin-left:90px ;
         margin-top:-38px;
     }
@@ -35,6 +44,22 @@
     h2{
         text-align: center;
         color: indigo;
+    }
+    #loginpage{
+        height: 30px;
+        border: blue;
+        font-size: 20px;
+        background-color:red;
+        color: antiquewhite;
+        cursor: pointer;
+        border-radius: 10px;
+        width: 250px;
+        margin: auto;
+
+    }
+    #loginpage:hover{
+      background-color: black;
+       color: antiquewhite;
     }
 
     </style>
@@ -52,7 +77,7 @@
             <label for="code">Referal code</label>
             <input type="number" id="code" placeholder="Code for discount">
             <p>*Optional</p>
-            <button id="loginpage" style="border-radius:5px;background-color:blue;color:white">Continue</button>
+            <button id="loginpage">Continue</button>
         </div>
 
     </div>
@@ -67,7 +92,7 @@ function  mypage(event){
     let name=document.querySelector("#name").value
     let email=document.querySelector("#email").value
 
-    if(name=="" &&email==""){
+    if(name==""||email==""){
         alert("Please Enter Vaild Details")
     }else{
         document.location.href="Day-2.html"
