@@ -9,7 +9,7 @@
         #container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
     margin-left: 100px;
     margin-top: 100px;
   }
@@ -34,7 +34,6 @@
     box-sizing: border-box;
 }
 #heading{
-  position:fixed;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 100%;
@@ -95,7 +94,7 @@
 <body>
     <div id="heading">
         <div >
-      <img src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
+      <img id="homeagain" src="https://www.rentomojo.com/public/images/Home/new/logo.svg" alt="">
       <h2>rotomojo</h2>
       <input id="searchforall" placeholder="Search for products" type="text">
         
@@ -105,61 +104,62 @@
          <button class="signlog">LOGIN/SIGNUP</button>
       </div>
       </div>
-    <h3 id="searchcount">Search result(50+)</h3>
     <div id="container">
     </div>
+    <h3 id="searchcount">Search result(50+)</h3>
+
 </body>
 </html>
 
 <script>
  let data=[
-    {image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
+    {image:"https://p.rmjo.in/productSquare/p4u3feti-500x500.jpg",
+    h3tag:"LED TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/xv6t8ac1-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/co3fqptc-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/0ad0io6i-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/e3l37bp2-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/21wfs3e5-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/rz1t7cye-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
+    prices:1789
+},{image:"https://p.rmjo.in/productSquare/5pc0nm7w-500x500.jpg",
+    h3tag:"Smart TV",
     prices:1789
 },{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
-    prices:1789
-},{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
-    h3tag:"Sofa & Bed Combo",
+    h3tag:"Smart TV",
     prices:1789
 },{image:"https://p.rmjo.in/productSquare/2agurqbp-500x500.jpg",
     h3tag:"Sofa & Bed Combo",
@@ -200,24 +200,57 @@ data.forEach(function(el){
     let text=document.createElement("h3");
     text.innerText=el.h3tag;
     let prices=document.createElement("p")
-    prices.innerText="$"+el.prices;
+    prices.innerText=el.prices;
     let cart=document.createElement("button")
     cart.innerText="Add to cart"
+    cart.style.cursor="pointer"
+    cart.style.color="darkgreen"
+
     cart.addEventListener("click",function(){
     cartArr.push(el)
     localStorage.setItem("cart-items",JSON.stringify(cartArr))
     })
     let rent=document.createElement("button")
     rent.innerText="Rent"
+    rent.style.cursor="pointer"
     rent.style.marginLeft="150px"
     rent.style.backgroundColor="red"
-    rent.style.width="50px"
+    rent.style.width="60px"
+    rent.style.height="20px"
     rent.style.color="white"
     rent.style.border="red"
+    rent.addEventListener("click",function(){
+        document.location.href="payment.html"
+    })
     row.append(image,text,prices,cart,rent)
     document.querySelector("#container").append(row)
 })
     
+document.querySelector("#search").addEventListener("click",function(){
+        let searchproduct=document.querySelector("#searchforall").value
 
+        if(searchproduct=="bed"){
+          document.location.href="bed.html"
+        }
+        if(searchproduct=="fitness"){
+          document.location.href="fitness.html"
+        }
+        if(searchproduct=="electronic"){
+          document.location.href="electronic.html"
+        }
+        if(searchproduct=="tv"){
+          document.location.href="tv.html"
+         }
+        if(searchproduct=="washing machine"){
+          document.location.href="washing.html"
+        }
+      })
+      document.querySelector("#homeagain").addEventListener("click",function(){
+        document.location.href="Day-1.html"
+      })
+      let cart=document.querySelector(".cart")
+cart.addEventListener("click",function(){
+  document.location.href="cart.html"
+})
 
 </script>
